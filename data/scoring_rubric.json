@@ -1,0 +1,8 @@
+{
+  "min_budget": 5000,
+  "good_timelines": ["immediate", "1-3 months"],
+  "acceptable_timelines": ["3-6 months"],
+  "target_company_sizes": ["11-50", "51-200", "201-1000"],
+  "qualify_threshold": 60,
+  "notes": "This rubric is meant to be edited per client. Swap these values for whatever actually defines a qualified lead for the business using this agent."
+}
