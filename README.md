@@ -26,6 +26,12 @@
 
 <br>
 
+<h2>See it in action</h2>
+
+<p align="center"><img src="demo/demo.gif" alt="Terminal recording of Lead Qualification Agent running on Google Gemini" width="100%"></p>
+
+<p align="center"><sub>Recorded from a real run on Google Gemini (<code>gemini-3.1-flash-lite</code>) on 12 November 2026. Nothing is edited or scripted. Only the waiting time while the model thinks is shortened. <a href="demo/demo.mp4">Download the MP4</a>.</sub></p>
+
 <h2>The problem</h2>
 
 <p>Inbound forms bring in everyone: serious buyers, students, competitors and people who are just curious. Sales reps either waste hours on bad leads or skim and miss the good ones.</p>
@@ -115,19 +121,74 @@ python process_leads.py
 
 <pre>
 lead-qualification-crm-agent/
-  .env.example             # copy to .env and add your key
-  case_study.md            # longer write-up of the design
-  process_leads.py         # scores the batch and routes each lead
+  .env.example                                           # copy to .env and add your key
+  case_study.md                                          # longer write-up of the design
+  process_leads.py                                       # scores the batch and routes each lead
   README.md
-  requirements.txt         # dependencies
+  requirements.txt                                       # dependencies
+  .git/
+    COMMIT_EDITMSG
+    config
+    description
+    HEAD
+    hooks/applypatch-msg.sample
+    hooks/commit-msg.sample
+    hooks/fsmonitor-watchman.sample
+    hooks/post-update.sample
+    hooks/pre-applypatch.sample
+    hooks/pre-commit.sample
+    hooks/pre-merge-commit.sample
+    hooks/pre-push.sample
+    hooks/pre-rebase.sample
+    hooks/pre-receive.sample
+    hooks/prepare-commit-msg.sample
+    hooks/push-to-checkout.sample
+    hooks/sendemail-validate.sample
+    hooks/update.sample
+    index
+    info/exclude
+    logs/HEAD
+    logs/refs/heads/main
+    logs/refs/remotes/origin/main
+    objects/0d/19a37d674a332b9dba9f34ec54f3144a81a21f
+    objects/16/2ea72a57b906722cbcd5df596273410d389cce
+    objects/17/665f447033b860c2e591912523c57c5d24e21d
+    objects/40/a753f31e25e1d8bf3d5039c46061a82c059c0d
+    objects/44/276a3a5a825028e0e701f239e86b68633b1eb0
+    objects/46/e09f73b4fe46e91eebab5c44af41bac1052e37
+    objects/4a/33c9fdfe2dd0f201902b5289652aa5e7cd25ad
+    objects/4d/1ce78d8177ff7b0b43fc6ff56d988c45ea0414
+    objects/6e/4ab97a9123002f2bcff1346e78194486badb3f
+    objects/78/76e888114b5ea94e86d548336761ccee1b94d7
+    objects/78/998da0758f803a8b7d9b492206632524003f81
+    objects/7a/3a4f0ab20b8170a7b714479283340f5fe09e10
+    objects/7e/4a054e376dd1d32f74632dbbaa6674f6a6f2ec
+    objects/8e/b05e2964f37b20a5656c6d10d7208668d8d2d9
+    objects/9e/08cd9fe80cc25e55f1e13caac1b7f56f4acfeb
+    objects/a2/667477f906e25e4d46862b73a0cf1d10163a78
+    objects/bb/1d0d20270c6b562a687dd6c5e21f3c4d7ba090
+    objects/c5/4aeb32cf364cf433dfb7c8ce58583bc231b3a2
+    objects/c5/97c23fa30e7a1e2dfac8278bb520f879e325c9
+    objects/c6/be8390839566c26f3a6992436e3d180eef26af
+    objects/d5/5b89ee48f2cecff8d606251b296a9b73107d6e
+    objects/de/746f20e8d94bc4bca3a762ef31b38beac8dfce
+    objects/e0/ea20b862a47d27dc99fb91b522463f92dc5ac8
+    objects/e5/6d0464232e3f00c54b6317bcda0a87126ef783
+    objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+    objects/eb/368faab1af9325a69becf6297f7176b4b93645
+    refs/heads/main
+    refs/remotes/origin/main
   agent/
-    crm_client.py          # HubSpot contacts and notes, with the CSV fallback
-    llm.py                 # picks the model from LLM_MODEL
-    scoring.py             # the scoring prompt and the qualify rule
+    crm_client.py                                        # HubSpot contacts and notes, with the CSV fallback
+    llm.py                                               # picks the model from LLM_MODEL
+    scoring.py                                           # the scoring prompt and the qualify rule
   data/
-    leads.csv              # five sample leads
-    scoring_rubric.json    # your definition of a qualified lead
-  tests/                   # pytest suite, runs without any API key
+    leads.csv                                            # five sample leads
+    scoring_rubric.json                                  # your definition of a qualified lead
+  demo/
+    demo.gif
+    demo.mp4
+  tests/                                                 # pytest suite, runs without any API key
 </pre>
 
 <h2>Built with</h2>
